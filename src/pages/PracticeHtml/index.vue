@@ -1,0 +1,483 @@
+<template>
+  <div class="practice-container">
+    <!-- 顶部搜索 -->
+    <div class="search-index">
+      <input
+        class="search"
+        placeholder="搜索：目的地/景点/酒店/航班号"
+        style="outline: none"
+      />
+      <a href="#" class="user">我 的</a>
+    </div>
+    <!-- 焦点图模块 -->
+    <!-- <div class="focus">
+      <img src="../../assets/images/xieCheng/focus.jpg" alt="" />
+    </div> -->
+    <!-- 局部导航栏 -->
+    <!-- <ul class="local-nav">
+      <li>
+        <a href="" title="景点·玩乐">
+          <span class="local-nav-icon"></span>
+          <span>景点·玩乐</span>
+        </a>
+      </li>
+      <li>
+        <a href="" title="景点·玩乐">
+          <span class="local-nav-icon nav-icon2"></span>
+          <span>周边游</span>
+        </a>
+      </li>
+      <li>
+        <a href="" title="景点·玩乐">
+          <span class="local-nav-icon nav-icon3"></span>
+          <span>美食林</span>
+        </a>
+      </li>
+      <li>
+        <a href="" title="景点·玩乐">
+          <span class="local-nav-icon nav-icon4"></span>
+          <span>一日游</span>
+        </a>
+      </li>
+      <li>
+        <a href="" title="景点·玩乐">
+          <span class="local-nav-icon nav-icon5"></span>
+          <span>当地攻略</span>
+        </a>
+      </li>
+    </ul>
+    -->
+    <!-- nav 
+    <div class="nav">
+      <div class="nav-common">
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+        </div>
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+          <a href="#">特价酒店</a>
+        </div>
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+          <a href="#">特价酒店</a>
+        </div>
+      </div>
+      <div class="nav-common">
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+        </div>
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+          <a href="#">特价酒店</a>
+        </div>
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+          <a href="#">特价酒店</a>
+        </div>
+      </div>
+      <div class="nav-common">
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+        </div>
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+          <a href="#">特价酒店</a>
+        </div>
+        <div class="nav-items">
+          <a href="#">海外酒店</a>
+          <a href="#">特价酒店</a>
+        </div>
+      </div>
+    </div>
+   -->
+
+    <!--  测导航栏 -->
+    <!-- <ul class="subnav-entry">
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="subnav-entry-icon"></span>
+          <span>电话费</span>
+        </a>
+      </li>
+    </ul> -->
+    <!-- 销售模块 -->
+    <!-- <div class="sales-box">
+      <div class="sales-hd">
+        <h2 title="热门活动">热门活动</h2>
+        <a href="#" class="more">获取更多福利</a>
+      </div>
+      <div class="sales-bd">
+        <div class="row">
+          <a href="#">
+            <img src="../../assets/images/xieCheng/pic1.jpg" alt="" />
+          </a>
+          <a href="#">
+            <img src="../../assets/images/xieCheng/pic2.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row">
+          <a href="#">
+            <img src="../../assets/images/xieCheng/pic3.jpg" alt="" />
+          </a>
+          <a href="#">
+            <img src="../../assets/images/xieCheng/pic4.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row">
+          <a href="#">
+            <img src="../../assets/images/xieCheng/pic5.jpg" alt="" />
+          </a>
+          <a href="#">
+            <img src="../../assets/images/xieCheng/pic6.jpg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</template>
+<script>
+import _ from 'lodash'
+export default {
+  name: 'practiceJs',
+  data() {
+    return {
+      //存储用户鼠标移上哪一个一级分类
+      //  shakeData: '我是数据',
+    }
+  },
+  //防抖，前面的触发都被取消，最后一次执行在规定时间内触发，也就是说快速触发的情况下，仅最后一次触发有效
+}
+</script>
+
+<style scoped lang="less">
+/* src="'../../styles/practicesFlex/prcFlex.scss" */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+div {
+  box-sizing: border-box;
+}
+.practice-container {
+  height: 100vh;
+  margin: 10px 240px;
+  background: #dcdcdc;
+  /* 顶部搜索 */
+  .search-index {
+    display: flex;
+    /* 固定定位跟父级没有关系，以当前网页为准 */
+    position: fixed;
+    top: 19%;
+    left: 50%;
+    /* 固定盒子应有的宽度 */
+    transform: translate(-50%);
+    width: 100%;
+    /* 给定元素设置最小宽度 */
+    min-width: 320px;
+    max-width: 540px;
+    height: 44px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #ccc;
+    .search {
+      flex: 1;
+      height: 26px;
+      margin: 4px 2px;
+      border-radius: 5px;
+      border: 2px solid #ccc;
+      padding-left: 23px;
+      padding-top: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 2);
+    }
+    .search::before {
+      content: '';
+      /* 绝对定位 */
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 15px;
+      height: 15px;
+      background: url(../../assets/images/xieCheng/sprite.png) no-repeat -59px -279px;
+      background-size: 104px auto;
+    }
+    .user {
+      width: 44px;
+      height: 44px;
+      // background: red;
+      font-size: 12px;
+      text-align: center;
+      color: #2eaae0;
+    }
+    .user::before {
+      content: '';
+      display: block;
+      width: 23px;
+      height: 23px;
+      background: url(../../assets/images/xieCheng/sprite.png) no-repeat -59px -194px;
+      background-size: 104px auto;
+      margin: 5px auto 0;
+    }
+  }
+  /* 焦点图模块 */
+  .focus {
+    padding-top: 43px;
+  }
+  .focus img {
+    width: 100%;
+  }
+  /* 局部导航栏 */
+  .local-nav {
+    display: flex;
+    height: 64px;
+    background: #f6f6f6;
+    margin: 3px 4px;
+    border-radius: 8px;
+  }
+  .local-nav li {
+    flex: 1;
+  }
+  .local-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+  .local-nav-icon {
+    width: 32px;
+    height: 32px;
+    background: pink;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    background: url(../../assets/images/xieCheng/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+  }
+  .nav-icon2 {
+    background-position: 0 -32px;
+  }
+  .nav-icon3 {
+    background-position: 0 -64px;
+  }
+  .nav-icon4 {
+    background-position: 0 -96px;
+  }
+  .nav-icon5 {
+    background-position: 0 -128px;
+  }
+
+  /* nav */
+  .nav {
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+  }
+  .nav-common {
+    height: 88px;
+    background: pink;
+    display: flex;
+    .nav-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .nav-items a {
+      flex: 1;
+      text-align: center;
+      line-height: 44px;
+      color: #fff;
+      font-size: 14px;
+      /* 文字阴影 */
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-items:nth-child(1) a {
+      border: 0;
+      background: url(../../assets/images/xieCheng/hotel.png) no-repeat;
+      background-size: 121px auto;
+      background-position: bottom center;
+    }
+
+    /* -n+2就是前面两个；n+2是从第二个开始 */
+    .nav-items:nth-child(-n + 2) {
+      border-right: 1px solid #fff;
+    }
+  }
+  .nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+  }
+  .nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+  }
+  .nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+  }
+  .nav-common:nth-child(2) {
+    margin: 3px 0px;
+  }
+  /* 测导航栏 */
+  .subnav-entry {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    padding: 5px 0;
+  }
+  .subnav-entry li {
+    flex: 20%;
+  }
+  .subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 0;
+  }
+  .subnav-entry-icon {
+    width: 28px;
+    height: 28px;
+    background-color: pink;
+    margin: 0 4px;
+    background: url(../../assets/images/xieCheng/subnav-bg.png) no-repeat;
+    background-size: 28px;
+  }
+  .sales-box {
+    border-top: 1px solid #bbb;
+    background: #fff;
+    margin: 4px;
+  }
+
+  .sales-hd {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ddd;
+  }
+  .sales-hd h2 {
+    position: relative;
+    text-indent: -999px;
+    height: 44px;
+    overflow: hidden;
+  }
+  .sales-hd h2::after {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    content: '';
+    width: 79px;
+    height: 15px;
+    background: url(../../assets/images/xieCheng/hot.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+  }
+  .more {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+  }
+  .more::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+  }
+  .row {
+    display: flex;
+  }
+  .row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+  }
+  .row a:nth-child(1) {
+    border-right: 1px solid #eee;
+  }
+  .row a img {
+    width: 100%;
+  }
+
+  /*
+//传统布局
+main {
+    position: relative; //此元素为相对定位
+    height: 100vh; //页面高度是整个设备的高度
+  }
+  main nav {
+    //导航
+    width: 80px;
+    position: absolute; //绝对定位
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: blanchedalmond;
+  }
+  main article {
+    background: red;
+    padding-left: 90px;
+    background-clip: content-box;
+    height: 100vh;
+  } */
+}
+</style>
